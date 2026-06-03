@@ -1,0 +1,16 @@
+# Generated data and report assets stay out of the repository.
+*.pdf
+*.mat
+*.fig
+*.tex
+*.pptx
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.asv
+.DS_Store
+results/
+figures/
+!assets/allocation_readme.png
+!assets/angle_estimation_readme.png

@@ -1,0 +1,19 @@
+function p = parameters()
+p.M = 16;
+p.d = 33e-3;                         % Confirmed slot spacing, metres.
+p.L = (p.M-1)*p.d;
+p.z = (0:p.M-1)*p.d;
+p.c0 = 3e8;
+p.fc = 2.35e9;
+p.f_min = 2.4e9;
+p.f_max = 4.5e9;
+p.alpha = 2.3598;                    % Analytical design point, not measured leakage.
+p.C = sqrt(-expm1(-2*p.alpha*p.d))*ones(1,p.M);
+p.K = 6;                            % Tested band count, not an orthogonality theorem.
+p.f = linspace(p.f_min,p.f_max,p.K);
+p.B = 20e6;
+p.P = 1;
+p.noise = 1e-3;                     % Normalized full-band link noise.
+p.frame_symbols = 1000;
+p.seed = 42;
+end
